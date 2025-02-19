@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site de Segurança</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="class.css">
+</head>
+
+<body>
+    <!--Menu de navegação-->
+    <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid" style="background-color: #EAEAEA;">
+                <a class="navbar-brand" href="#"><img src="https://cdn-icons-png.flaticon.com/512/36/36229.png"
+                        width="50"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html" class="menu">
+                                <h5>Home</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="detalhes.html" class="menu">
+                                <h5 class="navegacao-atual">Detalhes</h5>
+                            </a>
+                        </li>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!---->
+    <!--Informações do usuário-->
+    <div class="d-flex align-items-center tamanho">
+        <img src="https://cdn-icons-png.flaticon.com/512/17/17004.png" width="200px" class="tamanho">
+        <div class="texto-alinhado">
+            <div class="d-flex align-items-baseline">
+                <h2 class="texto-mini">Usuário</h2>
+                <span class="texto-menor">23 anos</span>
+            </div>
+            <p style="font-size: 20px;">emaildousuario@algumacoisa.com</p>
+        </div>
+    </div>
+    <div class="conteiner">
+        <div class="d-flex justify-content-center">
+            <div class="card p-3 me-3" style="width: 700px;">
+                <div class="card-header text-center">Nome do pai</div>
+                <div class="card-body text-center">Paidousuário</div>
+                <div class="card-header text-center mt-2">Nome da Mãe</div>
+                <div class="card-body text-center">Mãedousuário</div>
+            </div>
+
+            <div class="card p-3" style="width: 700px;">
+                <div class="card-header text-center">Data de Nascimento</div>
+                <div class="card-body">
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+</body>
+
+</html>
