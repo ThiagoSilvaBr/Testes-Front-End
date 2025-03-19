@@ -1,0 +1,5 @@
+.tamanho {
+    flex-grow: 1;
+    height: 60px;
+    font-size: 24px;
+}
