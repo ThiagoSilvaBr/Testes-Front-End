@@ -1,0 +1,61 @@
+/* Display da calculadosa*/
+.display {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: right;
+    font-size: 1.5rem;
+    height: 60px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.display-expression {
+    font-size: 1rem;
+    color: #666;
+    height: 20px;
+    overflow: hidden;
+}
+
+.display-result {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-dark {
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+/*Customização da calculadora*/
+.calculator-card {
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #0d3a68cc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/*Customização do fundo para deixa mais bonitinho*/
+body {
+    background-color: #87CEEB;
+}
+
+/* Tamanho dos botoes da calculadora*/
+.tamanho {
+    flex-grow: 1;
+    height: 60px;
+    font-size: 24px;
+}
