@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #171717;
+    }
+
+    h1 {
+      color: blue;
+      font-size: 50px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .negrito {
+      font-weight: bold;
+    }
+
+    .obrigatorio {
+      color: red;
+    }
+
+    .borda {
+      border: 5px;
+      border-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="mt-4" style="padding: 20px;">
+          <h1>Listas Simples</h1>
+          <ul>
+            <li>arroz</li>
+            <li>feijão</li>
+            <li>batata</li>
+            <li>macarrão</li>
+          </ul>
+          <ol>
+            <li>pão</li>
+            <li>presunto</li>
+            <li>queijo</li>
+            <li>mortadela</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-striped">
+          <h1>Tabela</h1>
+          <thead>
+            <tr class="borda">
+              <th scope="col">Horários</th>
+              <th scope="col">8:00</th>
+              <th scope="col">10:00</th>
+              <th scope="col">12:00</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="borda">
+              <th scope="row">Segunda</th>
+              <td>Matemática</td>
+              <td>Física</td>
+              <td>Química</td>
+            </tr>
+            <tr class="borda">
+              <th scope="row">Terça</th>
+              <td>Gramática</td>
+              <td>Literatura</td>
+              <td>Redação</td>
+            </tr>
+            <tr class="borda">
+              <th scope="row">Quarta</th>
+              <td>Ingles</td>
+              <td>Biologia</td>
+              <td>Ed. Física</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr class="borda">
+              <th scope="col">#</th>
+              <th scope="col">Produto1</th>
+              <th scope="col">Produto2</th>
+              <th scope="col">Produto3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="borda">
+              <th>Nome</th>
+              <td>Whey</td>
+              <td>Creatina</td>
+              <td>Suco</td>
+            </tr>
+            <tr class="borda">
+              <th>Preço</th>
+              <td>R$ 110,00</td>
+              <td>R$ 80,00</td>
+              <td>R$ 200,00</td>
+            </tr>
+            <tr class="borda">
+              <th>Quantidade</th>
+              <td>150</td>
+              <td>36</td>
+              <td>12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <h1>Formulario</h1>
+          <form>
+            <div class="mt-2">
+              <label>Email</label><span class="obrigatorio">*</span><br>
+              <input type="email" class="form-control" placeholder="exemplo@gmail.com" required />
+              <label>Senha</label><span class="obrigatorio">*</span><br>
+              <input type="password" class="form-control" required />
+            </div>
+            <div class="mt-2">
+              <label>Mensagem</label><br>
+              <textarea class="form-control" placeholder="Deixe sua opinião" rows="4"></textarea>
+            </div>
+            <div class="mt-2">
+              <label>Selecione seu país</label><br>
+              <select class="form-control">
+                <option>Brasil</option>
+                <option>EUA</option>
+                <option>Canadá</option>
+                <option>Japão</option>
+                <option>França</option>
+              </select>
+            </div>
+            <div class="mt-2">
+              <label>Informe seu genero</label><br>
+              <input type="radio" name="genero" class="form-check-input" />
+              <label>Masculino</label><br>
+              <input type="radio" name="genero" class="form-check-input" />
+              <label>Feminino</label><br>
+              <input type="radio" name="genero" class="form-check-input" />
+              <label>Outros</label>
+            </div>
+          </form>
+          <a href="https://soundcloud.com/isaac-gaming-140738594/nerd-emoji-beat?in=user-535200495/sets/memes"
+            target="_blank">
+            <button type="button" class="btn btn-outline-secondary mt-2" style="float: right;">Enviar</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="negrito">Don`t click me</h1>
+        <a href="https://www.twitch.tv/" target="_blank">
+          <img style="margin: 30px;" src="https://images7.memedroid.com/images/UPLOADED295/63019dae5eb6b.jpeg" alt="">
+        </a>
+      </div>
+      <button style="border-radius: 10px;" onclick="AperteOBotao()">NAO APERTE ESSE BOTAO</button>
+    </div>
+    <button style="border-radius: 10px; width: 100%;" onclick="ExibirNome()">APERTE ESSE BOTAO</button>
+    <button style="border-radius: 10px; width: 100%;" onclick="Conversao()">A</button>
+  </div>
+
+
+  <script>
+    alert('Olá Mundo!');
+    console.log('Meu primeiro script em JavaScript');
+
+
+    function AperteOBotao(){
+     var num1 = parseInt(prompt('Digite o primeiro número: '));
+     var num2 = parseInt(prompt('Digite o segundo número: '));
+      var media = (num1+num2)/2
+      alert(media);
+      console.log(media);
+      console.log(typeof(num1));
+      console.log(typeof(num2));
+      console.log(typeof(media));
+      
+    }
+
+    function ExibirNome(){
+      var nome = (prompt('Digite seu nome: '));
+      var idade = parseInt(prompt('Digite sua idade: '));
+      alert('Olá ' + nome + ', prazer em conhece-lo, vejo que sua idade é ' + idade + ' anos.');
+      console.log(typeof(nome));
+      console.log(typeof(idade));
+    }
+
+    function Conversao(){
+      var numero = parseInt(prompt('Digite um número: '));
+      console.log(numero);
+      console.log(typeof(numero));
+     
+    } 
+
+    var booleana = true;
+    console.log(typeof(booleana));
+  </script>
+</body>
+
+</html>
