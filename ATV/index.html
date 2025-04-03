@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATV</title>
+</head>
+<body>
+    <label>Nome</label>
+    <input type="text" id="nome"/><br>
+    <label>Idade</label>
+    <input type="text" id="idade"/><br>
+    <button onclick="Adicionar()">Adicionar</button>
+    <hr>
+    <label>Digite um numero</label>
+    <input type="text"/>
+    <button>verificar</button>
+    <button>Remover</button>
+
+    <script>
+        let vetor = [];
+        function Adicionar(){
+            vetor.push(
+                {'nome':document.getElementById('nome').value, 'idade': document.getElementById('idade').value}
+            )
+        console.log(vetor);
+        }
+    </script>
+</body>
+</html>
