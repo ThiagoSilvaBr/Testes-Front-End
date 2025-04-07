@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <style>
+        body{
+            background-color: #F5F5DC;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Texto para referencia-->
+    <h1 class="d-flex align-items-center justify-content-center text-center">Semi Formulário</h1>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <!--Entrada de dados do tipo nome e idade-->
+                <label>Nome</label>
+                <input class="form-control" placeholder="Digite Seu Nome" type="text" id="nome" /><br>
+                <label>Idade</label>
+                <input class="form-control" placeholder="Digite Sua Idade" type="text" id="idade" /><br>
+                <div class="mt-2">
+                <!--Botao que chama a função de adicionar para nome e idade-->
+                    <button style="float: right;" class="btn btn-outline-dark btn-sm"
+                        onclick="Adicionar()">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <!--Entrada de dados para verificar e remover nomes-->
+                <label>Digite um numero</label>
+                <input class="form-control" placeholder="Digite um Nome para Verificar ou uma Posição para Remover" type="text" id="index" />
+                <div class="mt-4">
+                    <!--botoes que chamam as funçoes de verificar e remover-->
+                    <button style="float: right;" class="btn btn-outline-dark btn-sm"
+                        onclick="Verificar()">verificar</button>
+                    <button style="float: right;" class="btn btn-outline-dark btn-sm"
+                        onclick="Remover()">Remover</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let vetor = [];
+        function Adicionar() {
+            vetor.push(//joga para dentro do vetor o que esta escrito com o valor de nome e idade.
+                { 'nome': document.getElementById('nome').value, 'idade': document.getElementById('idade').value }
+            )
+            console.log(vetor);//imprime no console o nome e idade adicionados
+            nome.value = "";//limpa o input de nome
+            idade.value = "";//limpa o input de idade
+        }
+
+        function Remover() {
+            let index = parseInt(document.getElementById('index').value);//pega o valor em index e transforma em inteiro, para dentro da variavel
+            vetor.splice(index, 1);//elimina um vetor na posição inicial descrita pelo usuario(index) e 1 casa apartir da posição
+            console.log(vetor);//imprime no console
+
+            index.value = "";//limpa input index
+        }
+
+        function Verificar() {
+            let encontrarNome = document.getElementById('index').value;//pega o valor em index, para dentro da variavel
+            let booleano = false;//cria uma variavel do tipo boolean para verificar caso haja o que se pede em for
+            for (let i = 0; i < vetor.length; i++) {
+                if (vetor[i].nome === encontrarNome) {//caso a posição dentro do for (i) for identica a varial que recebe o valor de index
+                                                     // é criado uma situação condicional para mostrar a posição do nome encontrado
+                    console.log(`Nome ${encontrarNome} encontrado na posição ${i}.`);//exibe posição
+                    booleano = true;//muda o valor da variavel boolean para verdadeiro para mostrar que foi encontrado
+                    break;//para a procura
+                }
+            }
+            if (booleano == false) {//caso percorra todo o loop acima e não mude o valor de boolean, exibe uma mensagem de não encontrado
+                console.log(`Nome ${encontrarNome} não encontrado no vetor.`);
+            }
+
+            index.value = "";//limpa input de index
+        }
+    </script>
+</body>
+
+</html>
