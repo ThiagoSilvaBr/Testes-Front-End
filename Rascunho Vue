@@ -1,0 +1,64 @@
+//AppVue
+<script>
+  import Info from './components/ComponentVue.vue'
+
+  export default {
+    components: {
+      Publicacao
+    },
+    data() {
+      return {
+        publicacoes: [
+        {
+          titulo_publicacao: "Publicação 1",
+          data_publicacao: "20/04/2025",
+          paragrafo: "Texto da publicação 1..."
+        },
+
+        {
+          titulo_publicacao: "Publicação 2",
+          data_publicacao: "22/04/2025",
+          paragrafo: "Texto da publicação 2..."
+        }
+        ]
+      }
+    }
+  }
+</script>
+
+<template>
+   <div>
+    <Publicacao
+      v-for="(item, index) in pessoas"
+      :key="index"
+      :title="item.titulo_publicacao"
+      :data="item.data_publicacao"
+      :paragrafo="item.paragrafo"
+    />
+  </div>
+  
+</template>
+
+<style>
+
+</style>
+----------------------------------------------------------------
+//ComponentVue
+<script>
+   export default {
+    props: ['tituloPublicacao', 'dataPublicacao', 'textoPublicacao']
+    };
+
+</script>
+
+<template>
+    <div>
+        <h4>{{tituloPublicacao}}</h4>
+        <p>{{dataPublicacao}}</p>
+        <p>{{textoPublicacao}}</p>
+    </div>
+</template>
+
+<style>
+
+</style>
